@@ -39,17 +39,34 @@ This project is a **Weather Data Collection System** designed for Day 1 of the *
 - **requests**: Simplified API calls to OpenWeather 🌐
 
 ---
+## ⚙️ Setup Instructions
 
-## 🗂️ Project Structure
+1. **Clone the repository**:  
+To get started, clone the repository to your local machine by running the following command:
+--Bash
+git clone https://github.com/MVJ-Dev/weather_aws_repo.git
 
-```bash
-weather-dashboard/
-  ├── src/
-  │   ├── __init__.py
-  │   ├── weather_dashboard.py
-  ├── tests/
-  ├── data/
-  ├── .env
-  ├── .gitignore
-  ├── requirements.txt
+2. Install dependencies:
+pip install -r requirements.txt
+
+3. Configure environment variables (.env):
+In order to interact with the OpenWeather API and AWS, create a .env file in the root directory and add the following lines:
+OPENWEATHER_API_KEY=your_openweather_api_key
+AWS_BUCKET_NAME=your_aws_bucket_name
+- Replace your_openweather_api_key with your actual OpenWeather API key.
+- Replace your_aws_bucket_name with your S3 bucket name.
+
+4. Configure AWS credentials:
+To allow the application to access your AWS S3 bucket, run the following command to configure your AWS credentials:
+aws configure
+- Enter your AWS Access Key ID and AWS Secret Access Key when prompted.
+- For Default region name, enter us-east-1 (or another region of your choice).
+- Set Default output format to json.
+
+5. Run the application:
+Finally, run the weather dashboard with this command:
+python src/weather_dashboard.py
+
+
+
 
